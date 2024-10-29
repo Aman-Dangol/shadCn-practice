@@ -4,7 +4,6 @@ import { DayPicker } from "react-day-picker";
 
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
-import { da } from "date-fns/locale";
 
 export type CalendarProps = React.ComponentProps<typeof DayPicker>;
 
@@ -22,7 +21,7 @@ function Calendar({
   const thin: Date[] = [];
   const heavy: Date[] = [];
   const medium: Date[] = [];
-  const modifyDates = Array.from(data.keys()).map((day) => {
+  Array.from(data.keys()).map((day) => {
     switch (data.get(day)) {
       case "light":
         thin.push(
@@ -62,18 +61,18 @@ function Calendar({
         month: "space-y-4  w-full",
         caption: "flex justify-center items-center pt-1 relative items-center ",
         caption_label: "text-sm font-medium",
-        nav: "space-x-1 flex items-center justify-between",
+        nav: "space-x-1 flex items-center justify-between ",
         nav_button: cn(
           buttonVariants({ variant: "outline" }),
           "h-7 w-7 bg-transparent p-0 opacity-50 hover:opacity-100"
         ),
         nav_button_previous: "absolute left-1 hidden",
         nav_button_next: "absolute right-1 hidden",
-        table: "w-full  border-collapse space-y-1 ",
+        table: "w-full  border-collapse space-y-1  ",
         head_row: "",
         head_cell:
           "text-muted-foreground rounded-md w-8 font-normal text-[0.8rem]",
-        row: " mt-2 justify-between  ",
+        row: "",
         cell: cn(
           props.mode === "range"
             ? "[&:has(>.day-range-end)]:rounded-r-md [&:has(>.day-range-start)]:rounded-l-md first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md"
