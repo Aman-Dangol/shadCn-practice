@@ -21,7 +21,6 @@ function App() {
         selected={date}
         onSelect={setDate}
         data={WORKOUT_VOLUME}
-        
       />
       <article className="p-4">
         <h5>Workout level</h5>
@@ -68,8 +67,8 @@ function App() {
         </Card>
       </Card>
       {/* progress bar */}
-      <Card className="p-2 py-1 rounded-3xl">
-        <Card className="w-[86%] h-[0.7rem] rgbBar relative">
+      <Card className="p-2 py-1 rounded-3xl relative overflow-hidden">
+        <Card className="w-[86%] h-[0.7rem] rgbBar ">
           <Separator
             orientation="vertical"
             className=" absolute left-[25%] border-2 h-full border-[#52555a]"
