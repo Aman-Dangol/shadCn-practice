@@ -68,7 +68,7 @@
     @apply text-3xl;
   }
   h5 {
-    @apply text-xl ;
+    @apply text-xl;
   }
 }
 
@@ -78,5 +78,8 @@
   }
   .text-foreground {
     color: var(--foreground);
+  }
+  .rgbBar {
+    background: linear-gradient(90deg, rgb(57, 57, 255), rgb(96, 255, 96), rgb(255, 78, 78));
   }
 }

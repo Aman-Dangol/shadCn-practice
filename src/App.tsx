@@ -3,6 +3,8 @@ import { Calendar } from "./components/ui/calendar";
 import { Card } from "./components/ui/card";
 import { Tabs, TabsList, TabsTrigger } from "./components/ui/tabs";
 import { ChevronRight, GitForkIcon, QrCode, Smile } from "lucide-react";
+import { Separator } from "@radix-ui/react-separator";
+import { WORKOUT_VOLUME } from "./constants/workout";
 
 function App() {
   const [date, setDate] = useState<Date | undefined>();
@@ -11,10 +13,16 @@ function App() {
     <Card className="w-[70vh] mx-auto bg-primary text-foreground border-0 p-4 ">
       <header className="p-4  flex justify-between items-center ">
         <h3 className="capitalize">settings</h3>
-        <h5 className={`capitalize text-sm`}>logoout</h5>
+        <h5 className={`capitalize text-sm  `}>logoout</h5>
       </header>
       <hr className="opacity-50" />
-      <Calendar mode="single" selected={date} onSelect={setDate} />
+      <Calendar
+        mode="single"
+        selected={date}
+        onSelect={setDate}
+        data={WORKOUT_VOLUME}
+        
+      />
       <article className="p-4">
         <h5>Workout level</h5>
         <p className="opacity-50">We use basic workout assessment</p>
@@ -57,6 +65,23 @@ function App() {
             <span>Current weight</span>
             <span>Target weight: 190lbs</span>
           </Card>
+        </Card>
+      </Card>
+      {/* progress bar */}
+      <Card className="p-2 py-1 rounded-3xl">
+        <Card className="w-[86%] h-[0.7rem] rgbBar relative">
+          <Separator
+            orientation="vertical"
+            className=" absolute left-[25%] border-2 h-full border-[#52555a]"
+          ></Separator>
+          <Separator
+            orientation="vertical"
+            className=" absolute left-[50%] border-2 h-full border-[#52555a]"
+          ></Separator>
+          <Separator
+            orientation="vertical"
+            className=" absolute left-[75%] border-2 h-full border-[#52555a]"
+          ></Separator>
         </Card>
       </Card>
     </Card>
