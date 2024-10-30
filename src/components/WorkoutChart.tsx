@@ -40,6 +40,12 @@ export default function WorkoutChart() {
           top: 20,
         }}
       >
+
+
+
+
+
+
         <XAxis
           dataKey={"day"}
           tickMargin={8}
