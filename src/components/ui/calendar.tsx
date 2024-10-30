@@ -50,11 +50,11 @@ function Calendar({
         medium: medium,
       }}
       modifiersClassNames={{
-        thin: " bg-white w-[10px] h-[10px]  text-white overflow-hidden hover:bg-white  ",
+        thin: " bg-white w-[.7rem] h-[.7rem]  text-white overflow-hidden hover:bg-white  ",
         heavy:
-          "bg-white h-[24px] w-[24px]  text-white overflow-hidden hover:bg-white ",
+          "bg-white h-[2rem] w-[2rem]  text-white overflow-hidden hover:bg-white ",
         medium:
-          "bg-white w-[16px] h-[16px]  text-white overflow-hidden hover:bg-white ",
+          "bg-white w-[1.6rem] h-[1.6rem]  text-white overflow-hidden hover:bg-white ",
       }}
       className={cn("p-3 border-none ", className)}
       classNames={{
