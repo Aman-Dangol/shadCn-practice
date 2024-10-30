@@ -50,9 +50,11 @@ function Calendar({
         medium: medium,
       }}
       modifiersClassNames={{
-        thin: " bg-white w-4 h-4  text-white overflow-hidden hover:bg-white ",
-        heavy: "bg-white h-8 w-8 overflow=hidden text-white hover:bg-white",
-        medium: "bg-white text-white w-6 h-6 overflow=hidden hover:bg-white",
+        thin: " bg-white w-[10px] h-[10px]  text-white overflow-hidden hover:bg-white  ",
+        heavy:
+          "bg-white h-[24px] w-[24px]  text-white overflow-hidden hover:bg-white ",
+        medium:
+          "bg-white w-[16px] h-[16px]  text-white overflow-hidden hover:bg-white ",
       }}
       className={cn("p-3 border-none ", className)}
       classNames={{
@@ -73,19 +75,19 @@ function Calendar({
         head_cell:
           "text-muted-foreground rounded-md w-8 font-normal text-[0.8rem]",
         row: "",
-        cell: cn(
-          props.mode === "range"
-            ? "[&:has(>.day-range-end)]:rounded-r-md [&:has(>.day-range-start)]:rounded-l-md first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md"
-            : "[&:has([aria-selected])]:rounded-md"
-        ),
+        // cell: cn(
+        //   props.mode === "range"
+        //     ? "[&:has(>.day-range-end)]:rounded-r-md [&:has(>.day-range-start)]:rounded-l-md first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md"
+        //     : "[&:has([aria-selected])]:rounded-md"
+        // ),
         day: cn(
           buttonVariants({ variant: "ghost" }),
-          "h-8 w-8  p-0 font-normal aria-selected:opacity-100 rounded-full hover:bg-green-400 hover:text-foreground block mx-auto   "
+          "h-8 w-8  p-0 font-normal aria-selected:opacity-100  rounded-full hover:bg-green-400 hover:text-white block mx-auto   "
         ),
         day_range_start: "day-range-start",
         day_range_end: "day-range-end",
         day_selected:
-          "bg-green-600 rounded-full hover:bg-green-600 text-white  ",
+          "!bg-green-600 !rounded-full !hover:bg-green-600  !text-white !h-[32px] !w-[32px]  ",
         day_outside: "opacity-50",
         day_disabled: "text-muted-foreground opacity-50",
         day_range_middle:
