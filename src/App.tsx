@@ -5,6 +5,7 @@ import { Tabs, TabsList, TabsTrigger } from "./components/ui/tabs";
 import { ChevronRight, GitForkIcon, QrCode, Smile } from "lucide-react";
 import { Separator } from "@radix-ui/react-separator";
 import { WORKOUT_VOLUME } from "./constants/workout";
+import WorkoutChart from "./components/WorkoutChart";
 
 function App() {
   const [date, setDate] = useState<Date | undefined>();
@@ -83,6 +84,7 @@ function App() {
           ></Separator>
         </Card>
       </Card>
+      <WorkoutChart />
     </Card>
   );
 }
