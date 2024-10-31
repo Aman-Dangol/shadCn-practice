@@ -6,6 +6,8 @@ WORKOUT_VOLUME.set(22, "medium");
 WORKOUT_VOLUME.set(26, "light");
 WORKOUT_VOLUME.set(28, "light");
 WORKOUT_VOLUME.set(6, "heavy");
+WORKOUT_VOLUME.set(7, "light");
+WORKOUT_VOLUME.set(8, "medium");
 WORKOUT_VOLUME.set(16, "light");
 WORKOUT_VOLUME.set(30, "heavy");
 WORKOUT_VOLUME.set(2, "medium");
